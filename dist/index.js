@@ -32147,7 +32147,6 @@ const config = {
   files: [core.getInput('protobuf')]
 };
 
-
 (async () => {
   const content = await convert(config);
   const openapi = JSON.stringify(content, null, 2)

@@ -33,4 +33,5 @@ const config = {
   const openapi = JSON.stringify(content, null, 2)
   core.setOutput("openapi", openapi);
   console.info('Converted schema written into ', "openapi");
+  console.info('Converted schema written into ', dist);
 })();
