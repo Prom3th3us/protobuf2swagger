@@ -32,6 +32,6 @@ const config = {
   const content = await convert(config);
   const openapi = JSON.stringify(content, null, 2)
   core.setOutput("openapi", openapi);
-  console.info('Converted schema written into ', "openapi");
-  console.info('Converted schema written into ', dist);
+  fs.writeFileSync("openapi.pipi", JSON.stringify(content, null, 2));
+  console.info('Converted schema written into ', "openapi.pipi");
 })();
