@@ -32145,14 +32145,14 @@ program
 
 const config = {
   files: [core.getInput('protobuf')]
-}
+};
 
 
 (async () => {
   const content = await convert(config);
   const openapi = JSON.stringify(content, null, 2)
   core.setOutput("openapi", openapi);
-  console.info('Converted schema written into ', dist);
+  console.info('Converted schema written into ', "openapi");
 })();
 
 })();
